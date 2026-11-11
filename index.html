@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ЗАМЕНИТЬ: SEO -->
+  <title>Beauty Studio — салон красоты в Подмосковье</title>
+  <meta name="description" content="Парикмахерские услуги, маникюр, косметология и массаж в Подмосковье. Онлайн-запись за 30 секунд. Опытные мастера, премиальный сервис.">
+  <meta property="og:title" content="Beauty Studio — салон красоты в Подмосковье">
+  <meta property="og:description" content="Парикмахерские услуги, маникюр, косметология и массаж. Онлайн-запись.">
+  <meta property="og:type" content="website">
+  <!-- ЗАМЕНИТЬ: OG-картинка (1200×630) -->
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:url" content="https://example.ru/">
+  <link rel="canonical" href="https://example.ru/">
+
+  <!-- Google Fonts (display=swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Микроразметка Schema.org BeautySalon -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Beauty Studio",
+    "image": "https://example.ru/og-image.jpg",
+    "url": "https://example.ru/",
+    "telephone": "+7-999-000-00-00",
+    "priceRange": "₽₽",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Примерная, 1",
+      "addressLocality": "Химки",
+      "addressRegion": "Московская область",
+      "postalCode": "141400",
+      "addressCountry": "RU"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo" aria-label="Beauty Studio — на главную">
+      <span class="logo__mark">BS</span>
+      <span class="logo__text">Beauty Studio</span>
+    </a>
+    <nav class="header__nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#masters">Мастера</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="contact">
+      <a href="tel:+79990000000" class="header__phone">+7 (999) 000-00-00</a>
+      <a href="#booking" class="btn btn--primary header__cta">Записаться онлайн</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__media">
+      <!-- ЗАМЕНИТЬ: фоновое фото салона. Рекомендуется 1600×1000, вес до 300 КБ (WebP/JPEG) -->
+      <img
+        src="./images/hero-img.jpg"
+        srcset="./images/hero-img.jpg 800w,
+                ./images/hero-img.jpg 1600w"
+        sizes="100vw"
+        alt="Интерьер салона красоты Beauty Studio"
+        fetchpriority="high">
+    </div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Красота, которой<br>хочется возвращаться</h1>
+      <p class="hero__subtitle">Премиальный салон в Подмосковье. Опытные мастера, авторские уходы и атмосфера спокойствия.</p>
+      <div class="hero__actions">
+        <a href="#booking" class="btn btn--primary btn--lg">Записаться онлайн</a>
+        <a href="#services" class="btn btn--ghost btn--lg">Смотреть услуги</a>
+      </div>
+      <ul class="hero__facts">
+        <li>12+ лет опыта</li>
+        <li>Топовые бренды</li>
+        <li>Рейтинг 4.9 ★</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ УСЛУГИ ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">Прайс-лист</p>
+        <h2 class="section__title">Услуги и цены</h2>
+        <p class="section__lead">Прозрачные цены и понятное время. Данные наполняются из массива <code>SERVICES</code> в <code>script.js</code>.</p>
+      </header>
+      <!-- Карточки рендерятся из JS-массива SERVICES -->
+      <div class="services" id="servicesGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ МАСТЕРА ============ -->
+  <section class="section section--alt" id="masters">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">Команда</p>
+        <h2 class="section__title">Наши мастера</h2>
+        <p class="section__lead">Каждый — профессионал с профильным образованием и любовью к делу.</p>
+      </header>
+      <div class="masters">
+        <!-- ЗАМЕНИТЬ: карточки мастеров (фото, имя, специализация, био) -->
+        <article class="master">
+          <div class="master__photo">
+            <img src="#!"
+                 alt="Фото вашего мастера" loading="lazy" width="500" height="625">
+          </div>
+          <h3 class="master__name">Анна</h3>
+          <p class="master__spec">Колорист-стилист</p>
+          <p class="master__bio">Окрашивание любой сложности, авторские блонд-техники, уход за волосами.</p>
+        </article>
+        <article class="master">
+          <div class="master__photo">
+            <img src="#!"
+                 alt="Фото вашего мастера" loading="lazy" width="500" height="625">
+          </div>
+          <h3 class="master__name">Мария</h3>
+          <p class="master__spec">Мастер маникюра</p>
+          <p class="master__bio">Аппаратный маникюр, укрепление, дизайн. Идеальная кутикула и стойкое покрытие.</p>
+        </article>
+        <article class="master">
+          <div class="master__photo">
+            <img src="#!"
+                 alt="Фото вашего мастера" loading="lazy" width="500" height="625">
+          </div>
+          <h3 class="master__name">Елена</h3>
+          <p class="master__spec">Косметолог-эстетист</p>
+          <p class="master__bio">Чистки, пилинги, аппаратные методики. Индивидуальные программы ухода.</p>
+        </article>
+        <article class="master">
+          <div class="master__photo">
+            <img src="#!"
+                 alt="Фото вашего мастера" loading="lazy" width="500" height="625">
+          </div>
+          <h3 class="master__name">Ольга</h3>
+          <p class="master__spec">Массажист</p>
+          <p class="master__bio">Расслабляющий, лимфодренажный и антицеллюлитный массаж. Медицинское образование.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ОТЗЫВЫ ============ -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <header class="section__head section__head--row">
+        <div>
+          <p class="eyebrow">Отзывы</p>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+        <div class="slider-arrows" role="group" aria-label="Навигация по отзывам">
+          <button type="button" class="slider-arrow" data-slider="prev" aria-label="Предыдущий отзыв">←</button>
+          <button type="button" class="slider-arrow" data-slider="next" aria-label="Следующий отзыв">→</button>
+        </div>
+      </header>
+
+      <!-- ЗАМЕНИТЬ: отзывы (тексты, имена, рейтинг) -->
+      <div class="slider" id="reviewsSlider" role="region" aria-label="Слайдер отзывов" tabindex="0">
+        <article class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p class="review__text">«Хожу на окрашивание к Анне второй год. Цвет всегда идеальный, волосы живые. Атмосфера в салоне очень уютная.»</p>
+          <footer class="review__author">Екатерина</footer>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p class="review__text">«Маникюр держится по три недели, ни один скол. Мария — волшебница, руки после неё как с обложки.»</p>
+          <footer class="review__author">Ольга</footer>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p class="review__text">«Сделала чистку у Елены — кожа дышит. Врач подобрала домашний уход, эффект виден через неделю.»</p>
+          <footer class="review__author">Наталья</footer>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="Оценка 4 из 5">★★★★☆</div>
+          <p class="review__text">«Отличный массаж, приятный интерьер. Единственное — хотелось бы больше парковочных мест.»</p>
+          <footer class="review__author">Ирина</footer>
+        </article>
+        <article class="review">
+          <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p class="review__text">«Записалась онлайн за минуту, приехала — всё по расписанию. Стрижка и укладка супер, спасибо!»</p>
+          <footer class="review__author">Алина</footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ОНЛАЙН-ЗАПИСЬ ============ -->
+  <section class="section booking" id="booking">
+    <div class="container">
+      <header class="section__head">
+        <p class="eyebrow">Онлайн-запись</p>
+        <h2 class="section__title">Запишитесь удобным способом</h2>
+        <p class="section__lead">Выберите виджет YClients или оставьте заявку — мы перезвоним и подтвердим время.</p>
+      </header>
+
+      <div class="booking__grid">
+        <!-- Опция 1: YClients -->
+        <div class="booking__card">
+          <h3 class="booking__card-title">Через YClients</h3>
+          <p>Выберите услугу, мастера и свободное окно в режиме реального времени.</p>
+          <!-- ЗАМЕНИТЬ: ссылка на страницу записи YClients. Взять в личном кабинете YClients: «Онлайн-запись → Прямая ссылка» -->
+          <a href="https://yclients.com/" id="yclientsLink" class="btn btn--primary btn--lg btn--block" target="_blank" rel="noopener">
+            Открыть YClients
+          </a>
+          <p class="booking__hint">Откроется в новой вкладке</p>
+        </div>
+
+        <!-- Опция 2: Форма заявки -->
+        <div class="booking__card">
+          <h3 class="booking__card-title">Оставить заявку</h3>
+          <form id="bookingForm" class="form" novalidate>
+            <div class="field">
+              <label for="name">Имя *</label>
+              <input type="text" id="name" name="name" autocomplete="name" required
+                     placeholder="Как к вам обращаться" aria-describedby="nameErr">
+              <span class="field__error" id="nameErr" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон *</label>
+              <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
+                     required placeholder="+7 (___) ___-__-__" aria-describedby="phoneErr">
+              <span class="field__error" id="phoneErr" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="service">Услуга *</label>
+              <select id="service" name="service" required aria-describedby="serviceErr">
+                <option value="">Выберите услугу</option>
+                <!-- Значения дублируют названия услуг из массива SERVICES -->
+              </select>
+              <span class="field__error" id="serviceErr" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="time">Удобное время <span class="muted">(необязательно)</span></label>
+              <input type="text" id="time" name="time" placeholder="Например: завтра после 15:00"
+                     autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
+              Отправить заявку
+            </button>
+
+            <p class="form__note">
+              Нажимая «Отправить», вы соглашаетесь с
+              <!-- ЗАМЕНИТЬ: ссылка на политику конфиденциальности -->
+              <a href="#" class="link">политикой конфиденциальности</a>.
+            </p>
+
+            <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ АДРЕС / КОНТАКТЫ ============ -->
+  <section class="section section--alt" id="contacts">
+    <div class="container contacts">
+      <div class="contacts__info">
+        <p class="eyebrow">Контакты</p>
+        <h2 class="section__title">Как нас найти</h2>
+
+        <!-- ЗАМЕНИТЬ: адрес и режим работы -->
+        <ul class="contacts__list">
+          <li>
+            <span class="contacts__label">Адрес</span>
+            Московская обл., г. Химки, ул. Примерная, 1
+          </li>
+          <li>
+            <span class="contacts__label">Режим работы</span>
+            Ежедневно 10:00–21:00
+          </li>
+          <li>
+            <span class="contacts__label">Телефон</span>
+            <a href="tel:+79990000000" class="link">+7 (999) 000-00-00</a>
+          </li>
+        </ul>
+
+        <div class="socials" aria-label="Социальные сети">
+          <!-- ЗАМЕНИТЬ: ссылки на соцсети -->
+          <a href="https://t.me/" class="social" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+          <a href="https://wa.me/79990000000" class="social" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://instagram.com/" class="social" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://vk.com/" class="social" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+        </div>
+      </div>
+
+      <div class="contacts__map">
+        <!-- ЗАМЕНИТЬ: вставить код карты из Яндекс.Карт (Конструктор карт → «Получить код»).
+             Атрибут data-src используется для ленивой загрузки iframe через JS. -->
+        <iframe
+          id="mapFrame"
+          title="Карта — расположение салона Beauty Studio"
+          data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A0000000000000000000000000000000000000000000000000000000000000000&amp;source=constructor"
+          width="100%" height="380" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <noscript>
+          <p><a href="https://yandex.ru/maps/">Открыть карту в Яндекс.Картах</a></p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__mark">BS</span>
+      <!-- ЗАМЕНИТЬ: название -->
+      <span>Beauty Studio</span>
+    </div>
+    <div class="footer__legal">
+      <!-- ЗАМЕНИТЬ: реквизиты (ИП/ООО, ИНН, ОГРН) -->
+      <p>ИП Иванова А. А. · ИНН 000000000000 · ОГРНИП 000000000000000</p>
+      <!-- ЗАМЕНИТЬ: ссылка на политику конфиденциальности -->
+      <p><a href="#" class="link">Политика конфиденциальности</a></p>
+      <p>© <span id="year"></span> Beauty Studio. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky-кнопка записи (только мобильные) -->
+<a href="#booking" class="sticky-cta" aria-label="Записаться онлайн">Записаться онлайн</a>
+
+<script src="script.js"></script>
+</body>
+</html>
